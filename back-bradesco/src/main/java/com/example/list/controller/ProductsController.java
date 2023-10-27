@@ -2,8 +2,10 @@ package com.example.list.controller;
 
 // import org.hibernate.mapping.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.example.list.ProductsSpringApplication.ConsumirApiService;
 
 // import com.example.crud.model.Course;
 
@@ -12,20 +14,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class ProductsController {
 
-    @GetMapping
-    public String list() {
-        return "api/courses";
+    private final ConsumirApiService consumirApiService;
+
+
+    public void ConsumirApiController(ConsumirApiService consumirApiService){
+        this.consumirApiService = consumirApiService;
     }
 
-
-    @GetMapping
-    public String listById() {
-        return "api/courses";
+    @GetMapping("/")
+    public String getAll() {
+        return consumirApiService.getAll();
     }
 
-
-    @GetMapping
-    public String serarc() {
-        return "api/courses";
+    @GetMapping("/id/{id}")
+    public String getById(@PathVariable int id) {
+        return consumirApiService.getById(id);
     }
 }
