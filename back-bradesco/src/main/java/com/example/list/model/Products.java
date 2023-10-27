@@ -1,4 +1,4 @@
-package com.example.crud.model;
+package com.example.list.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import lombok.Data;
 
 // @Table(name = "course") CASO JA TENHA UMA TABELA CRIADO NO DB
 
-public class Course {
+public class Products {
 
     // gerando um id automaticamente no banco
     // dando uma quantidade de caracteres 200

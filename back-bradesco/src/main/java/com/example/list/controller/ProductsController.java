@@ -1,4 +1,4 @@
-package com.example.crud.controller;
+package com.example.list.controller;
 
 // import org.hibernate.mapping.List;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/courses")
 
-public class CourseController {
+public class ProductsController {
 
     @GetMapping
     public String list() {
