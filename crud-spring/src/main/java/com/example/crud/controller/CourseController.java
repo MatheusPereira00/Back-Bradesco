@@ -16,4 +16,16 @@ public class CourseController {
     public String list() {
         return "api/courses";
     }
+
+
+    @GetMapping
+    public String listById() {
+        return "api/courses";
+    }
+
+
+    @GetMapping
+    public String serarc() {
+        return "api/courses";
+    }
 }
