@@ -1,11 +1,7 @@
 package com.example.list.model;
-
-// import jakarta.persistence.Entity;
 import lombok.Data;
 
-// DATA É DO lOMBOK E FACILITA QUANDO VOCE TEM MUITOS ATRIBUTOS
 @Data
-// @Entity
 public class Products {
 
     public int id;
@@ -18,6 +14,4 @@ public class Products {
     public String brand;
     public String category;
     public String thumbnail;
-    // public List<String> images;
-
 }

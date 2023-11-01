@@ -1,25 +1,18 @@
 package com.example.list.service;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.list.model.Products;
+
 @Service
 public class ConsumirApiService {
-	private final RestTemplate restTemplate;
 
-	public ConsumirApiService(RestTemplate restTemplate) {
-		this.restTemplate = restTemplate;
-	}
-
-	public String getAll() {
-		return restTemplate.getForObject("https://dummyjson.com/products", String.class);
-	}
-
-	public String getById(int id) {
-		return restTemplate.getForObject("https://dummyjson.com/products/{id}", String.class, id);
-	}
-
-	public String getByParam(int id) {
-		return restTemplate.getForObject("https://dummyjson.com/products/search?q=phone", String.class);
+	public Products getProducts(String products) {
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<Products> resp = restTemplate
+				.getForEntity(String.format("https://dummyjson.com/products", products), Products.class);
+		return resp.getBody();
 	}
 }
