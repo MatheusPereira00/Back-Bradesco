@@ -5,7 +5,6 @@ import com.example.list.service.ProductsFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.example.list.model.Products;
 
 @RestController
