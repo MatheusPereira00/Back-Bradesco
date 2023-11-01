@@ -1,17 +1,20 @@
 package com.example.list.model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Products {
-
-    public int id;
-    public String title;
-    public String description;
-    public int price;
-    public double discountPercentage;
-    public double rating;
-    public int stock;
-    public String brand;
-    public String category;
-    public String thumbnail;
+    private int id;
+    private String title;
+    private String description;
+    private int price;
+    private double discountPercentage;
+    private double rating;
+    private int stock;
+    private String brand;
+    private String category;
+    private String thumbnail;
 }
