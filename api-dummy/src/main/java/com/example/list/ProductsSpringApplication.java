@@ -8,6 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 public class ProductsSpringApplication {
 
+	// INNIT
 	public static void main(String[] args) {
 		SpringApplication.run(ProductsSpringApplication.class, args);
 	}
